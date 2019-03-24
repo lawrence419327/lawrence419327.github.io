@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        span {background-color: lime;
+        width:30px
+        height:30px}
+        btn{width:180px}
+    </style>
+</head>
+
+<body>
+    <input list='fun'>
+    <datalist id="fun">
+        <option value="soccer">soccer</option>
+        <option value="tennis">tennis</option>
+        <option value="fun">fun</option>
+
+
+    </datalist>
+    <input type="text" placeholder="Enter your username" required>
+    <input id="btn" type='image'
+    source='https://www.w3schools.com/w3css/img/lights.jpg'>
+    <input type="color">
+    <input type="file">
+    <button><img width=100
+    src="https://www.w3schools.com/w3css/img_lights.png">  </button>
+
+    <select id="fun">
+        <option value="">soccer</option>
+        <option value="">tennis</option>
+        <option value="">fun</option>
+    </select>
+    <br>
+    <meter min=0 max=10 value=5></meter>
+    <progress min=0 max=10 value=5></progress>
+   
+    <br> <input name='people' id="numOfPeople" type='range' min='1' max='10' value=5><span id=people></span>
+
+<input type="hidden" value='secretcode'>
+    <script>
+        // get tag
+        input = document.querySelector('#numOfPeople');
+        span = document.querySelector("span");
+        val = input.value;
+        span.innerHTML = val;
+        input.oninput = function(e) {
+        // get value
+        val = this.value;
+        // write value to span
+
+        span.innerHTML = val;
+        };
+
+    </script>
+</body>
+
+</html>
